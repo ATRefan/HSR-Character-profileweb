@@ -1,0 +1,266 @@
+@font-face {
+    font-family: lato;
+    src: url(../font/lato-black-webfont.woff);
+}
+
+body{
+    font-family: lato;
+    overflow: hidden;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    /* cari cara setting biar bg ngga kepotong  */
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-image: linear-gradient(#171718 30%, #1f2124 70%);
+    list-style-type: none;
+    z-index: 9999;
+}
+
+.navbar li a{
+    float: left;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+
+.navbar .logo{
+    width: 80px;
+    height: 10px;
+    background-image: url(../img/Honkai_Star_Rail_logo.png);
+    background-size: cover;
+}
+
+/* container */
+.container{
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    /* background-color: black; */
+    margin: 90px auto;
+}
+
+/* planet navigation */
+.locationnavbar{
+    background-image: linear-gradient(#171718, #1f2124);
+    width: fit-content;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 20px;
+    /* background-color: blue; */
+}
+
+.locationnavbar ul li{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.locationnavbar a:hover{
+    /* height: fit-content;
+    padding: 10px 20px; */
+    padding: 10px 5px;
+    border-radius: 20px ;
+    background-image: linear-gradient(#3b3b3b, #222222);
+    color: #f7f7f7;
+    transition: .1s;
+}
+/* image galery */
+
+.imagegalery{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box{
+    margin: 9px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 500px;
+    background-size: cover;
+    transform: skew(3deg);
+    transition: .5s;
+    background-size: cover;
+}
+
+.image-box.char1{
+    background-image: url(../img/characters/TheAstralExpress/march7th.png);
+    background-position: center;
+}
+
+.image-box.char2 {
+    background-image: url(../img/characters/TheAstralExpress/danheng.png);
+    background-position: center;
+}
+
+.image-box.char3{
+    background-image: url(../img/characters/TheAstralExpress/himeko.png);
+    background-position: -270px center;
+}
+
+.image-box.char4{
+    background-image: url(../img/characters/TheAstralExpress/weltz.png);
+    background-position: -230px center;
+}
+
+.image-box:hover{
+    transform: skew(0deg);
+    width: 300px;
+    background-position: center;
+}
+
+/* overlay */
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: .4s;
+    /* menyembunyikan elemen ketika baru load */
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+}
+
+/* profile */
+.charprofile{
+    position: relative;
+    margin: 80px auto;
+    width: 1200px;
+    height: 750px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 20px;
+}
+
+.charpic{
+    position: absolute;
+    background-image: url(../img/characters/TheAstralExpress/march7th.png);
+    background-size: cover;
+    background-position: center;
+    top: 100px;
+    left: 70px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.charname{
+    position: absolute;
+    top: 110px;
+    left: 500px;
+    font-size: 55px;
+}
+
+.charmenu{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    width: fit-content;
+    list-style-type: none;
+}
+
+.charmenu li{
+    display: inline-block;
+}
+
+.charmenu a{
+    background-image: linear-gradient(#171718, #1f2124);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px 60px;
+}
+
+.charstory{
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 1);
+    top: 245px;
+    left: 505px;
+}
+
+.charstory p{
+    line-height: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.charpath{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-image: url(../img/characters/element/ice.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(105, 220, 228, 0.9);
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 1);
+    top: 395px;
+    left: 350px;
+}
+
+.charelm{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 50%;
+    top: 395px;
+    left: 65px;
+
+    text-align: center;
+    line-height: 110px;  
+}
+
+
+
+
+/* footer */
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(#171718 30%, #1f2124 70%);
+    bottom: 0;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
